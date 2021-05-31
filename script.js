@@ -1,46 +1,39 @@
 
-let userInput = prompt("Hi, please enter the name of your favorite football club and the number of UEFA champions league titles they won separated by a space\nExample: Barca 5");
+let userInput = "";
+let team = "";
+let many = "";
 
-let usrNumber = document.querySelector("span");
-//let sec = document.querySelector("section");
-//var myImg = document.createElement('img');
-//myImg.src = "https://www.pngarts.com/files/5/UEFA-Champions-League-Trophy-Transparent-Image.png";
+// first time entry
+userInput = prompt("Hi, please enter the name of your favorite football club and the number of UEFA champions league titles they won separated by a space\nExample: Barca 5").split(" ");
 
-userInput = userInput.split(" ");
-//console.log(userInput);
+team = userInput[0];
+many = userInput[1];
 
-while (!(userInput[0].constructor == String && !isNaN(Number(userInput[1])))) {
-  userInput = prompt("Sorry, please check your entry.");
-}
+check(userInput); // calling the function
 
-if (userInput[0].constructor == String && !isNaN(userInput[1]) ) {
+// the function body itself
+function check(input) {
 
-  //myImg.style.maxWidth = String(90 / Number(userInput[1])) + "%";
+  this.team = team;
+  this.many = many;
 
-  for (let i = 0; i < Number(userInput[1]); i++){
-    document.write("<img src='https://www.pngarts.com/files/5/UEFA-Champions-League-Trophy-Transparent-Image.png'>");
-    //sec.appendChild(myImg);
-    //console.log(i);
+  while (input.length != 2 || this.team.constructor != String || Number(this.many) == 0 || isNaN(Number(this.many))) {
+
+    userInput = prompt("Hi, please enter the name of your favorite football club and the number of UEFA champions league titles they won separated by a space\nExample: Barca 5");
+
+    userInput = userInput.split(" ");
+    this.team = userInput[0];
+    this.many = userInput[1];
   }
 
-  usrNumber.innerHTML = userInput[1];
+  let usrNumber = document.querySelector("span");
 
-}
-/*document.write("<img src='https://www.pngarts.com/files/5/UEFA-Champions-League-Trophy-Transparent-Image.png'>");*/
-
-
-
-
-
-
-//console.log(usrNumber.innerHTML);
-
-/*var cup = document.createElement('img');
-cup.src="https://www.pngarts.com/files/5/UEFA-Champions-League-Trophy-Transparent-Image.png";
-cup.style.width = "30%";
-var cont = document.getElementById("trophies");*/
-
-/*for (let i = 0; i < userInput; i++){
+  for (let i = 0; i < Number(this.many); i++){
     document.write("<img src='https://www.pngarts.com/files/5/UEFA-Champions-League-Trophy-Transparent-Image.png'>");
-}*/
-// console.log(cont);
+
+    usrNumber.innerHTML = this.many;
+  }
+  return null; // in this function I do not have to return a value so I wil just return null
+}
+
+
