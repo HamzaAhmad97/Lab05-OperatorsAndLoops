@@ -17,9 +17,11 @@ function check(input) {
   this.team = team;
   this.many = many;
 
-  while (input.length != 2 || this.team.constructor != String || Number(this.many) == 0 || isNaN(Number(this.many))) {
+  userInput = input;
+  
+  while (userInput.length != 2 || this.team.constructor != String || Number(this.many) == 0 || isNaN(Number(this.many))) {
 
-    userInput = prompt("Hi, please enter the name of your favorite football club and the number of UEFA champions league titles they won separated by a space\nExample: Barca 5");
+    userInput = prompt("Sorry, try again.\nHint: Barca 5");
 
     userInput = userInput.split(" ");
     this.team = userInput[0];
