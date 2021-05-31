@@ -38,8 +38,6 @@
 			background-color: white;
 			width: 90%;
 			height: auto;
-			border-bottom-left-radius: 40%;
-			border-top-right-radius: 25%;
 
 		}
 
@@ -66,6 +64,7 @@
 			flex-direction: row;
 			align-content: center;
 			align-items: center;
+      flex-wrap: wrap;
 		}
 
 		li {
@@ -103,15 +102,23 @@
 		#logo {
 			border-radius: 50%;
 		}
+    #about {
+      margin: 2em;
+      text-align: left;
+    }
+    span {
+      color: Red;
+      font-weight: bold;
+    }
 	</style>
 </head>
 
 <body>
 	<div id="main">
 		<div id="answer">
-			<h1 id="ans">Yes, you are correct! The answer is 2 trophies.</h1>
+			<h1 id="ans">Your team has won the UEFA Chamipons league <span id="no"></span> times.</h1>
 			<div id="cont">
-				<img id="logo" src="https://logoeps.com/wp-content/uploads/2011/08/chelsea-logo-vector.png">
+				<img id="logo" src="https://www.soccermaster.com/wp-content/uploads/cw4134_adidas_finale_18_ucl_top_trainer_ball_sm_01.jpg">
             </div>
         </div>
         <div id="table">
@@ -120,14 +127,13 @@
                 <!-- <script src="script.js"></script>  -->
             </div>
             <div id="summary">
-                <ul>
-                    <li>2011-12: <strong>Chelsea</strong> 1-1 Bayern Munich (4-3) pen.</li>
-                    <li>2020-21: <strong>Chelsea</strong> 1-0 Manchester City</li>
-                </ul>
+                <p id="about">
+                  The UEFA Champions League (abbreviated as UCL) is an annual club football competition organised by the Union of European Football Associations (UEFA) and contested by top-division European clubs, deciding the competition winners through a round robin group stage to qualify for a double-legged knockout format, and a single leg final. It is one of the most prestigious football tournaments in the world and the most prestigious club competition in European football, played by the national league champions (and, for some nations, one or more runners-up) of their national associations.
+                </p>
             </div>
         </div>
         <div id="footer">
-            <p>Edited on May 30th by Hamza Ahmad.</p>
+            <p>Edited on May 31st by Hamza Ahmad.</p>
         </div>
     </div>
 </body>
